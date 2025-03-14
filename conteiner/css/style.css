@@ -94,17 +94,19 @@ p {
 }
 .intro-content {
     position: relative;
-    top: 5rem;
+    padding-top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
     min-height: 100vh;
     color: white;
+    
 }
 .intro-text-content, .intro-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 .intro-text-content h2:hover {
     color: rgb(0, 136, 255);
@@ -144,27 +146,87 @@ p {
     border-radius: 2%;
 }
 
-.planos-color {
-    background-color: black;
-    
+.planos {
+    position: relative;
     color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    top: 8rem;
+    min-height: 90vh;
+}
+.close-menu {
+    display: none;
 }
 
-.planos-content {
+.back-whatsapp img {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    width: 10rem;
+    height: 10rem;
     display: flex;
-    flex-flow: column wrap;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    border-radius: 50%;
+    color: rgb(22, 22, 22);
+    border: 0.3rem solid red;
 }
-.planos-funciona {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    height: 100vh;
+.back-whatsapp img:hover {
+    width: 11rem;
+    height: 11rem;
+    border: 0.8rem solid rgb(0, 121, 16);
 }
 
 @media (max-width:900px) {
-    .intro-content, .filmes-intro, .planos-color {
+    .intro-content, .filmes-intro {
         grid-template-columns: 1fr;
+    }
+    .planos-color {
+
+        grid-template-columns: 1fr;
+    }
+    .menu {
+        bottom: 0;
+        align-items: center;
+    }
+    .menu-content, .menu-content ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .menu-content {
+        height: 100vh;
+
+    }
+    .menu {
+        display: none;
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: wheat;
+        color: rgb(255, 255, 255);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    .close-menu:checked~.menu {
+        display: block;
+    }
+    .close-menu:checked~.close-menu-label::after {
+        content: 'X';
+        background: red;
+    }
+    .menu-spacing {
+        display: none;
     }
 }
