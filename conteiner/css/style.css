@@ -5,7 +5,8 @@
 }
 
 html {
-    font-size: 65.5%;
+    font-size: 55.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -16,7 +17,7 @@ body {
 
 h2 {
     font-size: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     text-transform: uppercase;
     line-height: 1.2;
 }
@@ -25,23 +26,19 @@ a {
     text-decoration: none;
 }
 
+p {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
 .section {
-    min-height: 100vh;
+    background: rgb(0, 0, 0);
 }
-
-
-
-.conteiner-white{
-    background: rgb(112, 112, 112);
-    min-height: 100vh;
-}
-
 .main-contente {
     max-width: 120rem;
     margin: 0 auto;
     padding: 3rem;
 }
-
 .menu {
     background: rgb(0, 0, 0);
     position: fixed;
@@ -52,8 +49,6 @@ a {
     z-index: 1;
     border-bottom: 0.1rem solid rgb(255, 0, 0);
 }
-
-
 .menu h1 a img {
     width: 10rem;
     height: 9rem;
@@ -62,12 +57,10 @@ a {
 .menu h1 a img:hover {
     border-radius: 0;
 }
-
 .menu ul {
     list-style: none;
     display: flex;    
 }
-
 .menu ul li a {
     color: white;
     display: block;
@@ -75,7 +68,6 @@ a {
     font-size: 1.8rem;
     position: relative;
 }
-
 .menu-content {
     display: flex;
     justify-content: space-between;
@@ -83,7 +75,6 @@ a {
     padding-top: 0;
     padding-bottom: 0;
 }
-
 .menu ul li a::after {
     content: '';
     position: absolute;
@@ -94,42 +85,86 @@ a {
     background: crimson;
     transition: all 300ms ease-in-out;
 }
-
 .menu ul li a:hover::after {
     width: 50%;
     left: 25%;
 }
-
 .menu-spacing {
     height: 9.5rem;
 }
-
-.caixa {
-    background: rgb(0, 0, 0);
-}
-
 .intro-content {
     position: relative;
-    top: -9.5rem;
+    top: 5rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
-    height: 100vh;
+    min-height: 100vh;
     color: white;
 }
-
 .intro-text-content, .intro-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
-
 .intro-text-content h2:hover {
     color: rgb(0, 136, 255);
 }
-
 .intro-img img{
     max-width: 100%;
     height: auto;
     border-radius: 2%;
+}
+.conteiner-white{
+    min-height: 100vh;
+    background-color: rgb(49, 46, 46);
+
+}
+
+.filmes-intro {
+    
+    position: relative;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    top: 10.5rem;
+}
+
+.filmes-text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.filmes-text  h2:hover {
+    color: rgb(0, 136, 255);
+}
+.filmes-text img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2%;
+}
+
+.planos-color {
+    background-color: black;
+    
+    color: white;
+}
+
+.planos-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+}
+.planos-funciona {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+}
+
+@media (max-width:900px) {
+    .intro-content, .filmes-intro, .planos-color {
+        grid-template-columns: 1fr;
+    }
 }
