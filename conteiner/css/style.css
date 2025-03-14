@@ -11,18 +11,25 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;
-    
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
 a {
     text-decoration: none;
 }
 
-.conteiner {
-    background: rgb(0, 87, 218);
+.section {
     min-height: 100vh;
-
 }
+
+
 
 .conteiner-white{
     background: rgb(112, 112, 112);
@@ -42,6 +49,7 @@ a {
     left: 0;
     right: 0;
     width: 100%;
+    z-index: 1;
     border-bottom: 0.1rem solid rgb(255, 0, 0);
 }
 
@@ -94,4 +102,34 @@ a {
 
 .menu-spacing {
     height: 9.5rem;
+}
+
+.caixa {
+    background: rgb(0, 0, 0);
+}
+
+.intro-content {
+    position: relative;
+    top: -9.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    height: 100vh;
+    color: white;
+}
+
+.intro-text-content, .intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-text-content h2:hover {
+    color: rgb(0, 136, 255);
+}
+
+.intro-img img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 2%;
 }
