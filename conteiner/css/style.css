@@ -159,6 +159,16 @@ p {
     display: none;
 }
 
+footer {
+    display: flex;
+    align-items: center;
+    background: gray;
+}
+.foot  {
+    display: flex;
+    align-items: center;
+}
+
 .back-whatsapp img {
     position: fixed;
     bottom: 2rem;
