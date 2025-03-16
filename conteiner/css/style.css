@@ -132,6 +132,16 @@ p {
     top: 10.5rem;
 }
 
+.planos-intro {
+    
+    position: relative;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    top: 10.5rem;
+}
+
 .filmes-text {
     display: flex;
     flex-flow: column wrap;
@@ -146,15 +156,7 @@ p {
     border-radius: 2%;
 }
 
-.planos {
-    position: relative;
-    color: white;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    top: 8rem;
-    min-height: 90vh;
-}
+
 .close-menu {
     display: none;
 }
@@ -193,13 +195,14 @@ footer {
     .intro-content, .filmes-intro {
         grid-template-columns: 1fr;
     }
-    .planos-color {
-
+    .planos-intro {
         grid-template-columns: 1fr;
     }
+
     .menu {
         bottom: 0;
         align-items: center;
+        display: none;
     }
     .menu-content, .menu-content ul{
         flex-direction: column;
@@ -209,10 +212,6 @@ footer {
         height: 100vh;
 
     }
-    .menu {
-        display: none;
-    }
-
     .close-menu-label::after {
         content: '☰';
         position: fixed;
